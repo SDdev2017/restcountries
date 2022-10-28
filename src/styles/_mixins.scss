@@ -1,0 +1,28 @@
+@import 'variables';
+
+@mixin tablet-design{
+    @media only screen and (min-width: $sm) {
+        @content;
+    }
+}
+
+@mixin laptop-design{
+    @media only screen and (min-width: $md) {
+        @content;
+    }
+}
+
+@mixin pc-design{
+    @media only screen and (min-width: $lg) {
+        @content;
+    }
+}
+
+@mixin default-shadow {
+    box-shadow: 1px 1px 5px $shadow-color;
+}
+
+@mixin default-link {
+    text-decoration: none;
+    background-color: $white;
+}
