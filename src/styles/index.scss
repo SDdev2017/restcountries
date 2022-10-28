@@ -159,7 +159,7 @@ main{
             }
 
             h3{
-                margin: 1rem 0;
+                padding: 1rem 0;
             }
 
             .country-information{
@@ -191,9 +191,15 @@ main{
         a{
             @include default-link;
             @include default-shadow;
-            display: inline-block;
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
             padding: .5rem 2rem;
             color: $very-dark-blue;
+
+            svg{
+                margin-right: .3rem;
+            }
         }
 
         .country-details-grid-container{

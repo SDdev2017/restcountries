@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { BsArrowLeft } from 'react-icons/bs';
 
 import flag from '../assets/germany.png';
 
@@ -7,7 +8,7 @@ export const CountryDetails:FC = () => {
     //const { state: {name, age, gender} } = useLocation();
   return (
     <section className='country-details-container'>
-      <Link to='/'>Back</Link>
+      <Link to='/'><BsArrowLeft/>Back</Link>
       <div className='country-details-grid-container'>
         <img src={flag} alt="Bulgaria's flag" />
         <section className='country-details-section'>
