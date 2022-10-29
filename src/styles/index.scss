@@ -1,6 +1,7 @@
 @import "normalize";
 @import "variables";
 @import "mixins";
+@import "loading-style";
 
 html {
     margin: 0;
@@ -148,7 +149,7 @@ main{
         article {
             width: 15rem;
             @include default-shadow;
-            border-radius: 0 0 6px 6px;
+            border-radius: 6px 6px 6px 6px;
             position: relative;
 
             .link{
@@ -165,13 +166,20 @@ main{
             .country-information{
                 padding: 0 1rem 2rem;
                 background-color: $white;
-                border-radius: 0 0 6px 6px;
+                border-radius: 0px 0px 6px 6px;
+            }
+
+            .image-container{
+                width: 15rem;
+                height: 10.18rem;
+                overflow: hidden;
+                border-radius: 6px 6px 0 0;
             }
 
             img {
                 width: 100%;
-                height: auto;
-                border-radius: 6px 6px 0 0;
+                height: 100%;
+                object-fit: cover;
             }
 
             ul {
