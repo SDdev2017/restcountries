@@ -1,4 +1,3 @@
-import React, {FC} from 'react';
 import {Routes, Route} from 'react-router-dom';
 
 import { CountriesList } from './components/CountriesList';
@@ -10,7 +9,8 @@ import { PageNotFound } from './components/PageNotFound';
 
 import './styles/index.scss';
 
-export const App:FC = () => {
+export const App = () => {
+
   return (
     <>
       <Header />
