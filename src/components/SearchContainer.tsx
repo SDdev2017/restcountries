@@ -7,6 +7,7 @@ interface Props {
 }
 
 export const SearchContainer:FC<Props> = ({searchInput, setSearchInput, setRegion}) => {
+    
     const handleSelect = (e:React.ChangeEvent<HTMLSelectElement>) => {
         setRegion(e.target.value);
         setSearchInput('');

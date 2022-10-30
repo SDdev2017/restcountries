@@ -1,30 +1,49 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BsArrowLeft } from 'react-icons/bs';
 
-import flag from '../assets/germany.png';
+import { BsArrowLeft } from 'react-icons/bs';
+import { format } from '../helpers';
 
 export const CountryDetails:FC = () => {
-    //const { state: {name, age, gender} } = useLocation();
+
+    const { 
+      state: {
+        name:{
+          common, 
+          nativeName
+        },
+        flags:{
+          svg
+        },
+        population,
+        region,
+        subregion,
+        capital,
+        tld,
+        currencies,
+        languages
+      }     
+    } = useLocation();
+
   return (
     <section className='country-details-container'>
       <Link to='/'><BsArrowLeft/>Back</Link>
       <div className='country-details-grid-container'>
-        <img src={flag} alt="Bulgaria's flag" />
+        <img src={ svg } alt="Bulgaria's flag" />
         <section className='country-details-section'>
-          <h1>Germany</h1>
+          <h1>{ common }</h1>
           <div className='details-list-container'>
             <ul>
-              <li><strong>Native Name:</strong> Germany</li>
-              <li><strong>Population:</strong> 11,123,121</li>
-              <li><strong>Region:</strong> Europe</li>
-              <li><strong>Sub Region:</strong> Western Europe</li>
-              <li><strong>Capital:</strong> Brussels</li>
+              <li><strong>Native Name:</strong> { Object.keys(nativeName).map((v:any) => nativeName[v].common).join(", ") }</li>
+              <li><strong>Population:</strong> { format(population) }</li>
+              <li><strong>Region:</strong> { region }</li>
+              <li><strong>Sub Region:</strong> { subregion }</li>
+              <li><strong>Capital:</strong> { capital }</li>
             </ul>
             <ul className='right'>
-              <li><strong>Top-level domain:</strong> .be</li>
-              <li><strong>Currencies:</strong> Euro</li>
-              <li><strong>Languages:</strong> Dutsch, French, German</li>
+              <li><strong>Top-level domain:</strong> { tld }</li>
+              <li><strong>Currencies:</strong> { Object.keys(currencies).map((v:any) => currencies[v].name).join(", ") }</li>
+              <li><strong>Languages:</strong> { Object.keys(languages).map((v:any) => languages[v]).join(", ") }</li>
             </ul>
           </div>
           <p><strong>Border Countries:</strong><span>Netherlands</span><span>Netherlands</span><span>Netherlands</span></p>
@@ -33,8 +52,3 @@ export const CountryDetails:FC = () => {
     </section>
   );
 }
-
-/*<h2>{ name }</h2>
-        <h3> { age } </h3>
-        <Link to='/'>Back</Link>
-*/

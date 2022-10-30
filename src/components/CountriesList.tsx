@@ -1,4 +1,4 @@
-import React, {FC, useState, useEffect} from 'react';
+import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useFetchData } from '../hooks/useFetchData';
@@ -24,20 +24,20 @@ export const CountriesList:FC = () => {
             const {name:{common}, flags:{svg}, population, region, capital} = v;
             
             return (
-            <article key={common}>
-              <Link to='details' state={v} className='link'></Link>
-              <div className='image-container'>
-                <img src={svg} alt={`${common}'s flag`} />
-              </div>
-              <div className='country-information'>
-                <h3>{common}</h3>
-                <ul>
-                  <li><strong>Population:</strong> {format(population)}</li>
-                  <li><strong>Region:</strong> {region}</li>
-                  <li><strong>Capital:</strong> {capital}</li>
-                </ul>
-              </div>
-            </article>)}) : <LoadingIcon/>
+              <article key={common}>
+                <Link to='details' state={v} className='link'></Link>
+                <div className='image-container'>
+                  <img src={svg} alt={`${common}'s flag`} />
+                </div>
+                <div className='country-information'>
+                  <h3>{common}</h3>
+                  <ul>
+                    <li><strong>Population:</strong> {format(population)}</li>
+                    <li><strong>Region:</strong> {region}</li>
+                    <li><strong>Capital:</strong> {capital}</li>
+                  </ul>
+                </div>
+              </article>)}) : <LoadingIcon/>
         }
       </section>
     </>
