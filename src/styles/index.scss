@@ -129,21 +129,21 @@ main{
         padding: 2rem 0;
         overflow: hidden;
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 15rem;
         justify-content: center;
         column-gap: 3rem;
         row-gap: 3rem;
         
         @include tablet-design {
-            grid-template-columns: auto auto;
+            grid-template-columns: 15rem 15rem;
         }
 
         @include laptop-design {
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 15rem 15rem 15rem;
         }
 
         @include pc-design {
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: 15rem 15rem 15rem 15rem;
         }
 
         article {
