@@ -262,6 +262,7 @@ main{
                         display: inline-block;
                         border: 1px solid $dark-gray;
                         padding: .3rem .6rem;
+                        margin-top: .3rem;
                     }
 
                     span:not(:last-child){
@@ -273,6 +274,7 @@ main{
             img{
                 width: 100%;
                 height: auto;
+                border: 1px solid hsl(0, 0%, 90%);
             }
 
             .details-list-container{

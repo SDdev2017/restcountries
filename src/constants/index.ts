@@ -1,4 +1,10 @@
-export const alpha3Codes = [
+interface AlphaObject {
+    code: string,
+    name: string,
+    eu: boolean
+}
+
+export const alpha3Codes:AlphaObject[] = [
     {
         "code": "AFG",
         "name": "Afghanistan",

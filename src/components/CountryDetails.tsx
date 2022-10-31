@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { BsArrowLeft } from 'react-icons/bs';
 import { format } from '../helpers';
+import { BorderCountries } from './BorderCountries';
 
 export const CountryDetails:FC = () => {
 
@@ -47,7 +48,7 @@ export const CountryDetails:FC = () => {
               <li><strong>Languages:</strong> { Object.keys(languages).map((v:any) => languages[v]).join(", ") }</li>
             </ul>
           </div>
-          <p><strong>Border Countries:</strong><span>Netherlands</span><span>Netherlands</span><span>Netherlands</span></p>
+          {borders && <BorderCountries borders={borders}/>}
         </section>
       </div>
     </section>
