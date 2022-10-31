@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import { BsArrowLeft } from 'react-icons/bs';
@@ -8,6 +8,7 @@ export const CountryDetails:FC = () => {
 
     const { 
       state: {
+        borders,
         name:{
           common, 
           nativeName

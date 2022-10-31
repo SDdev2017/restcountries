@@ -10,7 +10,7 @@ import { SearchContainer } from './SearchContainer';
 export const CountriesList:FC = () => {
   const {data, setRegion} = useFetchData();
   const [searchInput, setSearchInput] = useState<string>('');
-
+  console.log(data);
   return (
     <>
       <section className='search-container'>
