@@ -661,8 +661,13 @@ export const alpha3Codes:AlphaObject[] = [
         "eu": false
     },
     {
+        "code": "UNK",
+        "name": "Kosovo",
+        "eu": false
+    },
+    {
         "code": "MKD",
-        "name": "Macedonia, the former Yugoslav Republic of",
+        "name": "North Macedonia",
         "eu": false
     },
     {

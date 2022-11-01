@@ -10,7 +10,8 @@ import { SearchContainer } from './SearchContainer';
 export const CountriesList:FC = () => {
   const {data, setRegion} = useFetchData();
   const [searchInput, setSearchInput] = useState<string>('');
-  console.log(data);
+  document.title = 'Where in the world?';
+
   return (
     <>
       <section className='search-container'>

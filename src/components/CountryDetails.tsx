@@ -6,7 +6,6 @@ import { format } from '../helpers';
 import { BorderCountries } from './BorderCountries';
 
 export const CountryDetails:FC = () => {
-
     const { 
       state: {
         borders,
@@ -26,6 +25,8 @@ export const CountryDetails:FC = () => {
         languages
       }     
     } = useLocation();
+
+    document.title = common;
 
   return (
     <section className='country-details-container'>
