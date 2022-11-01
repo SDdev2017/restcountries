@@ -8,9 +8,18 @@ import { LoadingIcon } from './LoadingIcon';
 import { SearchContainer } from './SearchContainer';
 
 export const CountriesList:FC = () => {
-  const {data, setRegion} = useFetchData();
+  const {data, setRegion, rejected} = useFetchData();
   const [searchInput, setSearchInput] = useState<string>('');
   document.title = 'Where in the world?';
+
+  if(rejected){
+    return (
+      <>
+        <h1>Something went wrong.</h1>
+        <p>Please, try again later.</p>
+      </>
+    );
+  }
 
   return (
     <>
@@ -25,20 +34,21 @@ export const CountriesList:FC = () => {
             const {name:{common}, flags:{svg}, population, region, capital} = v;
             
             return (
-              <article key={common}>
-                <Link to='details' state={v} className='link'></Link>
+              <article key={ common }>
+                <Link to='details' state={ v } className='link'></Link>
                 <div className='image-container'>
-                  <img src={svg} alt={`${common}'s flag`} />
+                  <img src={ svg } alt={` ${common}'s flag` } />
                 </div>
                 <div className='country-information'>
-                  <h3>{common}</h3>
+                  <h3>{ common }</h3>
                   <ul>
-                    <li><strong>Population:</strong> {format(population)}</li>
-                    <li><strong>Region:</strong> {region}</li>
-                    <li><strong>Capital:</strong> {capital}</li>
+                    <li><strong>Population:</strong> { format(population) }</li>
+                    <li><strong>Region:</strong> { region }</li>
+                    <li><strong>Capital:</strong> { capital }</li>
                   </ul>
                 </div>
-              </article>)}) : <LoadingIcon/>
+              </article>)}) 
+              : <LoadingIcon/>
         }
       </section>
     </>

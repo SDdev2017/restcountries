@@ -32,7 +32,7 @@ export const CountryDetails:FC = () => {
     <section className='country-details-container'>
       <Link to='/'><BsArrowLeft/>Back</Link>
       <div className='country-details-grid-container'>
-        <img src={ svg } alt="Bulgaria's flag" />
+        <img src={ svg } alt={ `${common}'s flag` } />
         <section className='country-details-section'>
           <h1>{ common }</h1>
           <div className='details-list-container'>
