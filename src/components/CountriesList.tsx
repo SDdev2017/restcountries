@@ -6,6 +6,7 @@ import { format } from '../helpers';
 
 import { LoadingIcon } from './LoadingIcon';
 import { SearchContainer } from './SearchContainer';
+import { ErrorMessage } from './ErrorMessage';
 
 export const CountriesList:FC = () => {
   const {data, setRegion, rejected} = useFetchData();
@@ -14,10 +15,10 @@ export const CountriesList:FC = () => {
 
   if(rejected){
     return (
-      <>
-        <h1>Something went wrong.</h1>
+      <ErrorMessage>
+        <h2>Something went wrong.</h2>
         <p>Please, try again later.</p>
-      </>
+      </ErrorMessage>
     );
   }
 

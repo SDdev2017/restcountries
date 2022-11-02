@@ -1,11 +1,11 @@
-import React, {FC} from 'react';
 import { Link } from 'react-router-dom';
+import { ErrorMessage } from './ErrorMessage';
 
-export const PageNotFound:FC = () => {
+export const PageNotFound = () => {
   return (
-    <>
-        <h1>The page, you are searching for, is not available!</h1>
+    <ErrorMessage>
+        <h2>The page, you are searching for, is not available!</h2>
         <Link to='/'>Back to homepage</Link>
-    </>
+    </ErrorMessage>
   );
 }

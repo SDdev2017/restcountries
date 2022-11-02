@@ -13,6 +13,7 @@ export const useFetchData:ReturnObj = () => {
 
     useEffect(() => {
         setData(null);
+
         async function fetchData():Promise<void>{
           fetch(`https://restcountries.com/v3.1/region/${region}`)
             .then(res => {
@@ -24,7 +25,10 @@ export const useFetchData:ReturnObj = () => {
                 return res.json();
             })
             .then(data => setData(data))
-            .catch(() => setRejected(true));
+            .catch(error => {
+                setRejected(true);
+                console.log(error.cause.status);
+            });
         }
     
         fetchData();
