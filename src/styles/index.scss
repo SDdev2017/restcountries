@@ -77,13 +77,23 @@ header {
     }
 
     button {
+        @include tablet-design{
+            font-size: 1rem;
+        }
+
         display: flex;
         margin-left: auto;
         font-weight: 600;
+        font-size: .8rem;
 
         svg {
-            width: 1.3rem;
-            height: 1.3rem;
+            @include tablet-design{
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+
+            width: 1.1rem;
+            height: 1.1rem;
             margin-right: .5rem;
         }
     }
@@ -91,7 +101,7 @@ header {
 
 main{
     background-color: $very-light-gray;
-    padding: 2rem 1.5rem;
+    padding: 2rem 0;
     min-height: calc(100vh - 88px - 78px);
 
     @include tablet-design{
@@ -101,9 +111,11 @@ main{
     .search-container{
         display: flex;
         flex-direction: column;
+        padding-left: 1.7rem;
 
         @include tablet-design{
             flex-direction: row;
+            padding-left: 0;
         }
 
         input, select{
@@ -121,12 +133,13 @@ main{
 
         input{
             margin-bottom: 2rem;
-            width: 17rem;
+            width: 14rem;
             background: $white url(../assets/search.svg) no-repeat 12px center;
             padding-left: 40px;
 
             @include tablet-design{
                 margin-bottom: 0;
+                width: 17rem;
             }
         }
 
@@ -219,6 +232,7 @@ main{
             align-items: center;
             padding: .5rem 2rem;
             color: $very-dark-blue;
+            margin-left: 1rem;
 
             svg{
                 margin-right: .3rem;
@@ -240,7 +254,7 @@ main{
 
             padding: 3rem 0;
             display: grid;
-            grid-template-columns: 20.93rem;
+            grid-template-columns: 20rem;
             column-gap: 3rem;
             width: fit-content;
             margin: 0 auto;
