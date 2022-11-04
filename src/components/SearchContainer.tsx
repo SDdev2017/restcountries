@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import { FC } from 'react';
 
 interface Props {
     searchInput: string,
@@ -22,13 +22,13 @@ export const SearchContainer:FC<Props> = ({searchInput, setSearchInput, setRegio
             <input 
                 type="search" 
                 name="countryname" 
-                value={searchInput} 
+                value={ searchInput } 
                 aria-label="Search for a country" 
                 placeholder="Search for a country..." 
-                onChange={handleSearchInput}
+                onChange={ handleSearchInput }
             />
             
-            <select aria-label='Filter by Region' defaultValue="europe" onChange={handleSelect}>
+            <select aria-label='Filter by Region' defaultValue="europe" onChange={ handleSelect }>
                 <option value="europe">Europe</option>
                 <option value="africa">Africa</option>
                 <option value="america">America</option>
