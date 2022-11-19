@@ -53,12 +53,20 @@ h1,h2,h3,h4,h5,p {
     width: 100%;
     padding: 0 1rem;
 
+    @include themify($themes) {
+        color: themed('color');
+    }
+
     a{
         @include default-link;
         @include default-shadow;
         padding: .5rem 2rem;
-        color: $very-dark-blue;
         margin-top: .5rem;
+
+        @include themify($themes) {
+            background: themed('elementBackground');
+            color: themed('color');
+        }
     }
 
     h2 {
@@ -80,6 +88,11 @@ header {
     padding: 2rem 1rem;
     width: 100%;
 
+    @include themify($themes) {
+        background: themed('elementBackground');
+        color: themed('color');
+    }
+
     h2 {
         display: block;
         @include tablet-design{
@@ -92,6 +105,7 @@ header {
             font-size: 1rem;
         }
 
+        color: inherit;
         display: flex;
         margin-left: auto;
         font-weight: 600;
@@ -103,6 +117,10 @@ header {
                 height: 1.3rem;
             }
 
+            @include themify($themes) {
+                fill: themed('color');
+            }
+
             width: 1.1rem;
             height: 1.1rem;
             margin-right: .5rem;
@@ -111,9 +129,12 @@ header {
 }
 
 main{
-    background-color: $very-light-gray;
     padding: 2rem 0;
     min-height: calc(100vh - 88px - 78px);
+
+    @include themify($themes) {
+        background: themed('mainBackground');
+    }
 
     @include tablet-design{
         padding: 2rem 3rem;
@@ -137,7 +158,6 @@ main{
             font-size: .8rem;
             border: none;
             border-radius: 3px;
-            background-color: $white;
             font-weight: 600;
             @include default-shadow;
         }
@@ -145,8 +165,12 @@ main{
         input{
             margin-bottom: 2rem;
             width: 14rem;
-            background: $white url(../assets/search.svg) no-repeat 12px center;
             padding-left: 40px;
+
+            @include themify($themes) {
+                background: themed('searchInputBackground');
+                color: themed('color');
+            }
 
             @include tablet-design{
                 margin-bottom: 0;
@@ -157,6 +181,11 @@ main{
         select {
             @include tablet-design{
                 margin-left: auto;
+            }
+
+            @include themify($themes) {
+                background: themed('elementBackground');
+                color: themed('color');
             }
 
             padding-left: 1.1rem;
@@ -204,8 +233,12 @@ main{
 
             .country-information{
                 padding: 0 1rem 2rem;
-                background-color: $white;
                 border-radius: 0px 0px 6px 6px;
+
+                @include themify($themes) {
+                    background: themed('elementBackground');
+                    color: themed('color');
+                }
             }
 
             .image-container{
@@ -238,11 +271,15 @@ main{
         a{
             @include default-link;
             @include default-shadow;
+            @include themify($themes) {
+                background: themed('elementBackground');
+                color: themed('color');
+            }
+
             display: inline-flex;
             flex-direction: row;
             align-items: center;
             padding: .5rem 2rem;
-            color: $very-dark-blue;
             margin-left: 1rem;
 
             svg{
@@ -275,6 +312,10 @@ main{
                 flex-direction: column;
                 justify-content: center;
                 width: 100%;
+
+                @include themify($themes) {
+                    color: themed('color');
+                }
 
                 h1{
                     @include laptop-design{
@@ -314,7 +355,10 @@ main{
             img{
                 width: 100%;
                 height: auto;
-                border: 1px solid hsl(0, 0%, 90%);
+
+                @include themify($themes) {
+                    border: themed('countryFlagBorder');
+                }
             }
 
             .details-list-container{
@@ -346,16 +390,20 @@ main{
 }
 
 footer{
-    background-color: white;
     border-top: 1px solid $dark-gray;
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    @include themify($themes) {
+        background: themed('elementBackground');
+        color: themed('color');
+    }
+
     a{
         text-decoration: underline;
-        color: black;
+        color: inherit;
     }
 
     small{

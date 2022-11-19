@@ -1,5 +1,6 @@
 import { alpha3Codes } from '../constants';
 
+//returns array of countries' full name converted from alpha-3 codes (BGR -> Bulgaria)
 export function alphaToName(alphaCodes:string[]){
     const countries:string[] = [];
 

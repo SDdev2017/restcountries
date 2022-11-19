@@ -1,3 +1,4 @@
+//formats population number in format [xx,xxx,xxx]
 export function format(n:number):string{
     let arrayNumber:string[] = n.toString().split("").reverse();
     let formatted:string[] = [];

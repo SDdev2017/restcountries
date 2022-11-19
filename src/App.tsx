@@ -1,5 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
 
+import { ThemeProvider } from './contexts';
 import { CountriesList } from './components/CountriesList';
 import { CountryDetails } from './components/CountryDetails';
 import { Content } from './components/layout/Content';
@@ -12,7 +13,7 @@ import './styles/index.scss';
 export const App = () => {
 
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <Content>
         <Routes>
@@ -22,6 +23,6 @@ export const App = () => {
         </Routes>
       </Content>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }

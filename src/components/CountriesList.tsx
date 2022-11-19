@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { useFetchData } from '../hooks/useFetchData';
+import { useFetchData } from '../hooks';
 import { format } from '../helpers'; 
 
 import { LoadingIcon } from './LoadingIcon';

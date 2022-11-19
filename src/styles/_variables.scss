@@ -1,9 +1,31 @@
-$very-dark-blue: hsl(200, 15%, 8%);
+//color variables
+$very-dark: hsl(205, 26%, 17%);
+$light-dark: hsl(210, 22%, 22%);
 $dark-gray: hsl(0, 0%, 52%);
 $very-light-gray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 $shadow-color: rgba(0, 0, 0, .2);
+$black: hsl(0, 0%, 0%);
 
+//breakpoints variables
 $sm: 640px;
 $md: 915px;
 $lg: 1211px;
+
+//dark-light theme object
+$themes: (
+  light: (
+    elementBackground: $white,
+    searchInputBackground: $white url(../assets/searchLight.svg) no-repeat 12px center,
+    countryFlagBorder: 1px solid $dark-gray,
+    mainBackground: $very-light-gray,
+    color: $black
+  ),
+  dark: (   
+    elementBackground: $light-dark,
+    searchInputBackground: $light-dark url(../assets/searchDark.svg) no-repeat 12px center,
+    countryFlagBorder: none,
+    mainBackground: $very-dark,    
+    color: $white
+  ),
+);

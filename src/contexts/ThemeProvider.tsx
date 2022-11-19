@@ -1,16 +1,27 @@
-import { FC, createContext, useState } from 'react';
+import { FC, createContext, useContext } from 'react';
 
-const Theme = createContext('light');
+import { useToggleMode } from '../hooks';
+import { getDefaultTheme } from '../helpers';
+
+const Theme = createContext({
+    mode: '',
+    setMode: (theme: string) => {},
+  });
 
 interface Props {
     children: React.ReactNode;
 }
 
 export const ThemeProvider:FC<Props> = ({ children }) => {
-    const [themeMode, setThemeMode] = useState('light');
+    const {mode, setMode} = useToggleMode(getDefaultTheme());
+
     return (
-        <Theme.Provider value={themeMode}>
-            { children }
+        <Theme.Provider value={{ mode, setMode }}>
+            <div className={`theme-${mode}`}>
+                { children }
+            </div>
         </Theme.Provider>
     );
 }
+
+export const useThemeValue = () => useContext(Theme);

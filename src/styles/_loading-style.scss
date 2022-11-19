@@ -1,3 +1,5 @@
+@import "mixins";
+
 .lds-grid {
     display: inline-block;
     position: absolute;
@@ -12,8 +14,11 @@
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      background: black;
       animation: lds-grid 1.2s linear infinite;
+
+      @include themify($themes) {
+        background: themed('color');
+      }
 
       &:nth-child(1) {
         top: 8px;

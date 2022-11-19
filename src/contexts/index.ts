@@ -1,3 +1,3 @@
-import { ThemeProvider } from "./ThemeProvider";
+import { ThemeProvider, useThemeValue } from "./ThemeProvider";
 
-export { ThemeProvider };
+export { ThemeProvider, useThemeValue };

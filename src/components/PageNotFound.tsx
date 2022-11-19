@@ -5,7 +5,7 @@ export const PageNotFound = () => {
   return (
     <ErrorMessage>
         <h2>The page, you are searching for, is not available!</h2>
-        <Link to='/'>Back to homepage</Link>
+        <Link to='/'>Go to homepage</Link>
     </ErrorMessage>
   );
 }
