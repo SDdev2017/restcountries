@@ -37,7 +37,7 @@ npm start
 
 ## 💻 Built with
 
-- ReactJS
+- React, React Router, Context API
 - Sass
 - TypeScript
 - Create React App API
