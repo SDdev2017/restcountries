@@ -14,7 +14,7 @@ export const useFetchData:ReturnObj = () => {
     useEffect(() => {
         setData(null);
 
-        async function fetchData():Promise<void>{
+        function fetchData():void{
           fetch(`https://restcountries.com/v3.1/region/${region}`)
             .then(res => {
                 if(!res.ok){
