@@ -14,7 +14,7 @@
 1. Clone the repository
 
 ```bash
-git clone https://github.com/SDdev2017/ip-tracker.git
+git clone https://github.com/SDdev2017/restcountries.git
 ```
 
 2. Change the working directory
@@ -37,7 +37,7 @@ npm start
 
 ## 💻 Built with
 
-- ReactJS
+- React, React Router, Context API
 - Sass
 - TypeScript
 - Create React App API
