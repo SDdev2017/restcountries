@@ -1,7 +1,7 @@
 import { FC, createContext, useContext } from 'react';
 
 import { useToggleMode } from '../hooks';
-import { getDefaultTheme } from '../helpers';
+import { getDefaultTheme } from '../utils';
 
 const Theme = createContext({
     mode: '',

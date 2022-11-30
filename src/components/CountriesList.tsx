@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useFetchData } from '../hooks';
-import { format } from '../helpers'; 
+import { format } from '../utils'; 
 
 import { LoadingIcon } from './LoadingIcon';
 import { SearchContainer } from './SearchContainer';

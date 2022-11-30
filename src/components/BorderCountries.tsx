@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { alphaToName } from '../helpers';
+import { alphaToName } from '../utils';
 
 interface Props {
     borders: string[]

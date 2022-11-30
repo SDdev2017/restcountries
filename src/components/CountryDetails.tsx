@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import { BsArrowLeft } from 'react-icons/bs';
-import { format } from '../helpers';
+import { format } from '../utils';
 import { BorderCountries } from './BorderCountries';
 
 export const CountryDetails:FC = () => {
