@@ -5,7 +5,7 @@ import { BsArrowLeft } from 'react-icons/bs';
 import { format } from '../utils';
 import { BorderCountries } from './BorderCountries';
 
-export const CountryDetails:FC = () => {
+export const CountryDetails:FC = () => { 
     const { 
       state: {
         borders,

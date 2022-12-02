@@ -7,6 +7,7 @@ import { format } from '../utils';
 import { LoadingIcon } from './LoadingIcon';
 import { SearchContainer } from './SearchContainer';
 import { ErrorMessage } from './ErrorMessage';
+import { FetchedData } from '../types';
 
 export const CountriesList:FC = () => {
   const {data, setRegion, rejected} = useFetchData();
@@ -30,8 +31,8 @@ export const CountriesList:FC = () => {
 
       <section className='country-list-container'>
         {data ? data
-          .filter((v:any) => v.name.common.toLowerCase().includes(searchInput.toLowerCase()))
-          .map((v:any) => {
+          .filter((v:FetchedData) => v.name.common.toLowerCase().includes(searchInput.toLowerCase()))
+          .map((v:FetchedData) => {
             const {name:{common}, flags:{svg}, population, region, capital} = v;
             
             return (
