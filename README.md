@@ -2,7 +2,7 @@
  REST Countries App
 </h1>
 
-<p>REST Countries API with color theme switcher made with React and TypeScript</p>
+<p>REST Countries app with color theme switcher built with React and TypeScript</p>
 
 <img src='./src/assets/screenshot.png' alt='rest countries screenshot' />
 
